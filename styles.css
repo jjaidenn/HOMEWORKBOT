@@ -83,3 +83,48 @@ body{background:radial-gradient(ellipse at 14% 8%,#33305b55 0,transparent 34%),r
  .memory-art{width:70px;height:70px}.memory-art svg{width:68px;height:68px}
 }
 @media(max-width:390px){.intro{padding-bottom:130px}.welcome-art{transform:scale(.7)}.welcome-row h1{font-size:27px}}
+
+
+/* Sidebar + icon polish */
+:root{--accent:#a9b8ff;--accent-2:#c39cff;--accent-soft:#a9b8ff1c}
+.workspace.ready{max-width:none;grid-template-columns:248px minmax(0,1fr);min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;min-height:100vh;padding:28px 18px 18px;background:linear-gradient(180deg,#12182a 0%,#0d1220 52%,#0b101a 100%);border-right:1px solid #9cafff24;box-shadow:12px 0 50px #0002;z-index:6}
+.sidebar-brand{margin:0 0 44px 8px}
+.side-label{margin-left:12px;color:#7582a5}
+.nav-item{width:100%;min-height:43px;padding:10px 12px;gap:11px;border:1px solid transparent;border-radius:11px;font-size:12px;letter-spacing:.1px}
+.nav-item .nav-icon{width:22px;height:22px;flex-basis:22px;border-radius:7px;background:#a9b8ff0c}
+.nav-icon svg{width:16px;height:16px}
+.nav-item.active{background:linear-gradient(100deg,#a9b8ff22,#c39cff12);border-color:#a9b8ff2b;color:#f0f2ff;box-shadow:inset 3px 0 0 #a9b8ff}
+.nav-item.active .nav-icon{background:#a9b8ff20;color:#d7ddff}
+.sidebar-bottom{padding:16px 8px 4px;margin-top:auto;border-top:1px solid #a9b8ff20}
+.avatar{box-shadow:0 0 0 4px #a9b8ff12,0 5px 18px #9aaaff35}
+.dashboard{max-width:none;width:min(100%,1280px);padding:34px clamp(24px,4vw,68px)}
+.dash-top{align-items:center;gap:14px}
+.sidebar-toggle{display:none;align-items:center;gap:8px;border:1px solid #a9b8ff30;background:#a9b8ff12;color:#dfe4ff;border-radius:9px;padding:8px 11px;font:600 10px 'DM Sans';cursor:pointer}
+.sidebar-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.nav-item:focus-visible,.sidebar-toggle:focus-visible,.feature-card:focus-visible{outline:2px solid #c3a5ff;outline-offset:3px}
+.sparkle svg,.art-spark svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+.art-spark svg{width:100%;height:100%}
+.sparkle{display:inline-flex}
+.lock-icon{display:inline-flex;flex:0 0 16px}
+.lock-icon svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.success-orb svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.preview-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.welcome-symbol span svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.feature-symbol{background:linear-gradient(145deg,#a9b8ff25,#c39cff18);color:#d8ddff}
+.memory-card{border-color:#8fe0c13b}
+@media(max-width:720px){
+ .workspace.ready{display:grid;grid-template-columns:minmax(0,1fr);position:relative}
+ .sidebar{position:absolute;top:0;left:0;width:min(82vw,280px);height:calc(100vh - 64px);min-height:0;transform:translateX(-110%);transition:transform .24s ease;box-shadow:20px 0 60px #0009;border:1px solid #a9b8ff28;border-left:0;border-radius:0 16px 16px 0;padding:22px 16px;display:flex;flex-direction:column}
+ .sidebar.mobile-open{transform:translateX(0)}
+ .sidebar-brand{margin:0 0 32px 8px}
+ .side-label,.side-label-lower{display:block}
+ .sidebar-bottom{display:flex}
+ .nav-item{min-height:44px}
+ .sidebar-toggle{display:inline-flex;flex:0 0 auto}
+ .dashboard{padding:22px 17px}
+ .dash-date{margin-left:auto}
+ .sidebar-backdrop{position:fixed;inset:0;background:#03050ac9;z-index:5;opacity:0;pointer-events:none;transition:opacity .2s}
+ .sidebar-backdrop.visible{opacity:1;pointer-events:auto}
+}
+@media(min-width:721px){.sidebar-backdrop{display:none!important}}
