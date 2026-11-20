@@ -38,7 +38,7 @@ Serve this folder with a static web server. The app uses browser ES modules and 
 
 ## Current limitations / next work
 
-- Google Docs requires the Docs API enabled and a Google OAuth 2.0 Web client ID with this site authorized. Add the public client ID in Settings → Google Docs.
+- Google Docs requires the Docs API enabled and a Google OAuth 2.0 Web client ID with this site authorized. Add the public client ID in Settings → Google Docs. In Google Cloud Console, enable the Google Docs API, create an OAuth 2.0 Web application client, add `https://jjaidenn.github.io` as an authorized JavaScript origin, and configure the OAuth consent screen (including your account as a test user if the app is in testing). No redirect URI is needed for the browser token flow.
 - Google access tokens stay in memory for the current browser session.
 - Image understanding uses the attached image; scanned PDFs may need to be uploaded as images if the PDF has no selectable text.
 - Learning memory is user-managed notes today; automatic memory summaries can be added later.
