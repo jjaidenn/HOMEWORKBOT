@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d14" />
+  <meta name="description" content="EVERMIND — your personal AI study space." />
+  <title>EVERMIND — Your study space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Evermind home"><span class="brand-mark">e</span><span>evermind</span></a>
+    <div class="topbar-right"><span class="secure-dot"></span><span>Your private study space</span></div>
+  </header>
+
+  <main>
+    <section class="onboarding" id="onboarding">
+      <div class="step-meta"><span>GETTING STARTED</span><span id="step-count">01 <i>/ 02</i></span></div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+      <div class="intro">
+        <div class="eyebrow"><span class="sparkle">✳</span> A LITTLE HEAD START</div>
+        <h1>Let's make this<br><span>feel like yours.</span></h1>
+        <p class="intro-copy">EVERMIND gets better at helping when it understands how you work. Give it a glimpse of your schoolwork — or skip this and start fresh.</p>
+      </div>
+
+      <div class="upload-card" id="upload-card">
+        <div class="upload-heading">
+          <div class="upload-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4.5 15.5v3A1.5 1.5 0 0 0 6 20h12a1.5 1.5 0 0 0 1.5-1.5v-3"/></svg></div>
+          <div><h2>Share a little of your work</h2><p>Completed assignments, notes, essays, or worksheets.</p></div>
+          <span class="optional-tag">OPTIONAL</span>
+        </div>
+        <label class="dropzone" id="dropzone" for="file-input">
+          <input id="file-input" type="file" accept="image/*,.pdf,.doc,.docx,.txt" multiple />
+          <span class="upload-cloud"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0L8 7m4-4 4 4M5 14.5A4.5 4.5 0 0 0 5.5 23h13a4.5 4.5 0 0 0 .5-9 6.5 6.5 0 0 0-12.7-1.3"/></svg></span>
+          <strong>Drop your files here</strong>
+          <span class="drop-sub">or <b>browse files</b> on your device</span>
+          <span class="file-types">PHOTOS · PDF · DOCX · TXT</span>
+        </label>
+        <div class="file-list" id="file-list" aria-live="polite"></div>
+        <div class="privacy-note"><span class="lock-icon">⌑</span><span>Your files are only used to personalize your learning experience. You choose what to share.</span></div>
+      </div>
+
+      <div class="actions">
+        <button class="button button-primary" id="continue-btn" type="button">Continue <span>→</span></button>
+        <button class="button button-quiet" id="skip-btn" type="button">I'll do this later</button>
+      </div>
+      <p class="footnote">You can add, review, or remove learning samples any time in Settings.</p>
+    </section>
+
+    <section class="next-screen hidden" id="next-screen">
+      <div class="success-orb"><span>✳</span></div>
+      <div class="eyebrow">YOU'RE ALL SET</div>
+      <h1>Your space.<br><span>Your pace.</span></h1>
+      <p id="next-copy">Your EVERMIND workspace is ready. This is where your questions, assignments, and study sessions will live.</p>
+      <div class="next-preview">
+        <div class="preview-line"><span class="preview-icon">✧</span><div><b>AI Tutor</b><small>Ask questions and work through problems</small></div><span class="preview-arrow">↗</span></div>
+        <div class="preview-line"><span class="preview-icon">▤</span><div><b>My assignments</b><small>Keep schoolwork organized in one place</small></div><span class="preview-arrow">↗</span></div>
+        <div class="preview-line"><span class="preview-icon">⌘</span><div><b>Learning memory</b><small>Build on what you've shared over time</small></div><span class="preview-arrow">↗</span></div>
+      </div>
+      <button class="button button-primary finish-button" id="finish-btn" type="button">Enter EVERMIND <span>→</span></button>
+      <p class="footnote">This is the first interface preview. Account sync and AI features are coming in the next build.</p>
+    </section>
+
+    <section class="workspace hidden" id="workspace">
+      <aside class="sidebar">
+        <a class="brand sidebar-brand" href="#"><span class="brand-mark">e</span><span>evermind</span></a>
+        <div class="side-label">WORKSPACE</div>
+        <button class="nav-item active"><span>⌂</span> Overview</button>
+        <button class="nav-item"><span>✧</span> AI Tutor</button>
+        <button class="nav-item"><span>▤</span> Assignments</button>
+        <button class="nav-item"><span>◷</span> Study room</button>
+        <div class="side-label side-label-lower">YOUR SPACE</div>
+        <button class="nav-item"><span>⌘</span> Memory</button>
+        <button class="nav-item"><span>⚙</span> Settings</button>
+        <div class="sidebar-bottom"><div class="avatar">S</div><div><b>Student</b><small>Personal workspace</small></div><span class="more">···</span></div>
+      </aside>
+      <div class="dashboard">
+        <div class="dash-top"><span class="breadcrumb">Workspace <span>/</span> Overview</span><div class="dash-date">YOUR STUDY SPACE</div></div>
+        <div class="welcome-row"><div><div class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</div><h1>Welcome to <span>EVERMIND.</span></h1><p>A calmer place to think, learn, and get things done.</p></div><div class="welcome-symbol">e<span>✳</span></div></div>
+        <div class="dashboard-grid">
+          <button class="feature-card tutor-card"><span class="feature-symbol">✧</span><span class="card-kicker">YOUR AI STUDY PARTNER</span><h2>Ask anything.<br>Figure it out.</h2><p>Get clear explanations, step-by-step help, and answers that make sense.</p><span class="card-link">Open AI Tutor <b>↗</b></span></button>
+          <button class="feature-card assignment-card"><span class="feature-symbol">▤</span><span class="card-kicker">STAY ON TRACK</span><h2>Your work,<br>in one place.</h2><p>Bring assignments and classwork together instead of hunting them down.</p><span class="card-link">View assignments <b>↗</b></span></button>
+          <div class="memory-card"><div><span class="card-kicker">BUILT AROUND YOU</span><h2>A little more context.<br>A lot more helpful.</h2><p>As you share work and chat, EVERMIND can build a learning profile you control.</p></div><span class="memory-art">✳</span></div>
+        </div>
+        <div class="bottom-note"><span class="secure-dot"></span> Your workspace is ready. Connect an AI provider and storage to activate live features.</div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
