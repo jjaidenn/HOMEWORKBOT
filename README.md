@@ -1,15 +1,15 @@
 # EVERMIND
 
-A personal AI study workspace for learning, organizing assignments, and keeping useful study context in one private place.
+An AI assignment-completion workspace for answering questions, drafting essays, and organizing schoolwork in one private place.
 
 ## Current features
 
 - Responsive onboarding with optional schoolwork samples and a skip path
 - Supabase email sign-up and sign-in
 - Private per-user file storage with a 15 MB per-file limit
-- AI Tutor connected through a protected Supabase Edge Function
-- Image attachments sent to the vision-capable tutor through short-lived signed URLs
-- PDF, DOCX, and TXT text extraction in the browser for tutor questions
+- Assignment assistant connected through a protected Supabase Edge Function
+- Image attachments sent to the vision-capable assignment assistant through short-lived signed URLs
+- PDF, DOCX, and TXT text extraction in the browser for assignment completion
 - Persistent conversations and chat history
 - Assignment tracker with due dates, completion, and deletion
 - User-controlled Memory notes plus AI-generated suggestions requiring approval\n- Google Docs OAuth, document reading, answer preview, and user-confirmed insertion\n- Focus timer, session notes, profile/theme settings, and JSON data export
