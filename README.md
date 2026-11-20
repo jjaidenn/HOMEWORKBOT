@@ -12,7 +12,7 @@ A personal AI study workspace for learning, organizing assignments, and keeping 
 - PDF, DOCX, and TXT text extraction in the browser for tutor questions
 - Persistent conversations and chat history
 - Assignment tracker with due dates, completion, and deletion
-- User-controlled Memory notes for learning preferences, goals, and references
+- User-controlled Memory notes plus AI-generated suggestions requiring approval\n- Google Docs OAuth, document reading, answer preview, and user-confirmed insertion\n- Focus timer, session notes, profile/theme settings, and JSON data export
 - Row Level Security on EVERMIND data tables
 
 ## Architecture
@@ -38,8 +38,8 @@ Serve this folder with a static web server. The app uses browser ES modules and 
 
 ## Current limitations / next work
 
-- Google Docs connection and insertion still need Google OAuth and Docs API setup.
-- Settings and Study Room are navigation placeholders.
+- Google Docs requires the Docs API enabled and a Google OAuth 2.0 Web client ID with this site authorized. Add the public client ID in Settings → Google Docs.
+- Google access tokens stay in memory for the current browser session.
 - Image understanding uses the attached image; scanned PDFs may need to be uploaded as images if the PDF has no selectable text.
 - Learning memory is user-managed notes today; automatic memory summaries can be added later.
 
